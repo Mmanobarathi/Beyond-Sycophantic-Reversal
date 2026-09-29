@@ -60,7 +60,7 @@ Each question goes through three phases:
 .
 ├── configs/        # Experiment settings (model, decoding, pushback styles)
 ├── data/           # Question sets used in the experiments
-├── src/            # Source code for the three-phase pipeline
+├── Source_file/            # Source code for the three-phase pipeline
 ├── outputs/        # Results and conversation transcripts
 ├── figures/        # Plots used in the paper
 ├── requirements.txt
@@ -89,17 +89,17 @@ huggingface-cli login
 
 ## Usage
 
-Run the three phases in order, using the scripts in `src/` and settings in `configs/`:
+Run the three phases in order, using the scripts in `Source_file/` and settings in `configs/`:
 
 ```bash
 # Phase 1: screen questions the model answers correctly
-python src/<screening\_script>.py --config configs/<config\_file>.yaml
+python Source_file/<screening\_script>.py --config configs/<config\_file>.yaml
 
 # Phase 2: apply pushback and record flips
-python src/<pushback\_script>.py --config configs/<config\_file>.yaml
+python Source_file/<pushback\_script>.py --config configs/<config\_file>.yaml
 
 # Phase 3: apply reversal and record recovery
-python src/<reversal\_script>.py --config configs/<config\_file>.yaml
+python Source_file/<reversal\_script>.py --config configs/<config\_file>.yaml
 ```
 
 > Replace the `<...>` placeholders with your actual file names.
