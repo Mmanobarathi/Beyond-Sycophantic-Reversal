@@ -1,0 +1,4 @@
+name: google/gemma-2-2b-it
+dtype: bfloat16
+slug: gemma2b
+questions: data/questions_gemma2b.jsonl
